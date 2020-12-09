@@ -9,6 +9,14 @@ public class Motortester extends LinearOpMode {
     public DcMotor revmotor;
     @Override
     public void runOpMode() throws InterruptedException {
+        revmotor = hardwareMap.get(DcMotor.class,"Motor");
+
+        waitForStart();
+
+        double motorpower=-gamepad1.left_stick_y;
+        revmotor.setPower(motorpower);
+
+
 
     }
 }
